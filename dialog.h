@@ -3,6 +3,7 @@
 
 #include "preprocessor.h"
 #include <QDialog>
+#include <QLayoutItem>
 
 namespace Ui {
 class Dialog;

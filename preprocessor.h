@@ -3,6 +3,8 @@
 
 #include <QDialog>
 
+
+#include "ui_dialog.h"
 namespace Ui {
 class preprocessor;
 }
@@ -18,6 +20,7 @@ public:
 private:
     Ui::preprocessor *ui;
      int line;
+     Ui::Dialog *widget;
 public slots:
     void addline();
     void deliteline();

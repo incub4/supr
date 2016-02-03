@@ -11,6 +11,8 @@ preprocessor::preprocessor(QWidget *parent) :
     ui->table__load->resizeColumnsToContents();
     connect(ui->add_line,SIGNAL(clicked(bool)),this,SLOT(addline()));
     connect(ui->delite_line,SIGNAL(clicked(bool)),this,SLOT(deliteline()));
+    widget = new Ui::Dialog;
+//    connect(ui->PB_close,SIGNAL(clicked(bool)),widget,SLOT(show()));
     //    ui->table_kernel->setRowCount(10);
 
 }
