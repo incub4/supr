@@ -7,10 +7,11 @@ preprocessor::preprocessor(QWidget *parent) :
 {
     line=1;
     ui->setupUi(this);
-    ui->tableWidget->resizeColumnsToContents();
+    ui->table_kernel->resizeColumnsToContents();
+    ui->table__load->resizeColumnsToContents();
     connect(ui->add_line,SIGNAL(clicked(bool)),this,SLOT(addline()));
     connect(ui->delite_line,SIGNAL(clicked(bool)),this,SLOT(deliteline()));
-//    ui->tableWidget->setRowCount(10);
+    //    ui->table_kernel->setRowCount(10);
 
 }
 
@@ -22,20 +23,20 @@ preprocessor::~preprocessor()
 void preprocessor::addline()
 {
 
-//    static int i=1;
+    //    static int i=1;
     line++;
-    ui->tableWidget->setRowCount(line);
-qDebug() << line;
+    ui->table_kernel->setRowCount(line);
+    qDebug() << line;
 }
 
 void preprocessor::deliteline()
 {
 
-//    static int i = ui->tableWidget->rowCount();
+    //    static int i = ui->table_kernel->rowCount();
     if(line>=1)
         line--;
-    ui->tableWidget->setRowCount(line);
-qDebug() << line;
+    ui->table_kernel->setRowCount(line);
+    qDebug() << line;
 }
 
 

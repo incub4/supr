@@ -7,12 +7,12 @@ Dialog::Dialog(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QPixmap pixmap("D:/Desktop/page.png");
+    QPixmap pixmap("C:/qtProgs/gui/supr/page.png");
     ui->label->setPixmap(pixmap);
     // открытие нового окна при нажатие на кнопку препроцессора
     connect(ui->PB_preprocessor,SIGNAL(clicked(bool)),pr,SLOT(show()));
 
-    connect(ui->PB__processor,SIGNAL(clicked(bool)),SLOT(newmenu()));
+//    connect(ui->PB__processor,SIGNAL(clicked(bool)),SLOT(newmenu()));
 }
 
 Dialog::~Dialog()
