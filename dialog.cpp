@@ -13,24 +13,24 @@ Dialog::Dialog(QWidget *parent) :
 
     preprocessor *pr = new preprocessor;
     connect(ui->PB_preprocessor,SIGNAL(clicked(bool)),pr,SLOT(show()));
+    connect(ui->PB_preprocessor,SIGNAL(clicked(bool)),this,SLOT(close()));
+//    connect(ui->PB_preprocessor,SIGNAL(clicked(bool)),this,SLOT(hide()));
 
+
+//    connect(ui->PB__processor,SIGNAL(clicked(bool)),SLOT(newmenu()));
 }
 
 Dialog::~Dialog()
 {
     delete ui;
 }
-///////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-//////////////////////СЛОТЫ///////////////////////////////////
+
 void Dialog::newmenu() //
 {
     clean();
 }
-///////////////////////////////////////////////////////////////
 
-
-////////////////////функции\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 void Dialog::clean( )
 {/*
