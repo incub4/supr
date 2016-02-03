@@ -21,3 +21,6 @@ HEADERS  += dialog.h \
 
 FORMS    += dialog.ui \
     preprocessor.ui
+
+RESOURCES += \
+    myres.qrc

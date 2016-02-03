@@ -10,8 +10,10 @@ Dialog::Dialog(QWidget *parent) :
     this->setFixedSize(220,300);
     ui->label->setFixedSize(220,300);
 
+
+    preprocessor *pr = new preprocessor;
     connect(ui->PB_preprocessor,SIGNAL(clicked(bool)),pr,SLOT(show()));
-    connect(ui->PB_preprocessor,SIGNAL(clicked(bool)),this,SLOT(hide()));
+//    connect(ui->PB_preprocessor,SIGNAL(clicked(bool)),this,SLOT(hide()));
     ui->PB_preprocessor->setStyleSheet("QPushButton:enabled { background-color: #d8c1ba; border-radius:5px;}"
                                        "QPushButton:hover { background-color: gray; color: white; }"
                                        "QPushButton:pressed { background-color: black; color: white;}"

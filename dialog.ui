@@ -19,6 +19,10 @@
   <property name="windowTitle">
    <string>SUPR</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="myres.qrc">
+    <normaloff>:/icon/diagram44.ico</normaloff>:/icon/diagram44.ico</iconset>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -31,6 +35,9 @@
    <property name="text">
     <string/>
    </property>
+   <property name="pixmap">
+    <pixmap resource="myres.qrc">:/icon/background.png</pixmap>
+   </property>
   </widget>
   <widget class="QPushButton" name="PB_preprocessor">
    <property name="geometry">
@@ -40,6 +47,12 @@
      <width>131</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:enabled { background-color: #d8c1ba; border-radius:5px;}
+                                       QPushButton:hover { background-color: gray; color: white; }
+                                       QPushButton:pressed { background-color: black; color: white;}
+                                       QPushButton:disabled { background-color: white; border-radius:5px;}</string>
    </property>
    <property name="text">
     <string>Препроцессор</string>
@@ -54,6 +67,12 @@
      <height>23</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:enabled { background-color: #d8c1ba; border-radius:5px;}
+                                       QPushButton:hover { background-color: gray; color: white; }
+                                       QPushButton:pressed { background-color: black; color: white;}
+                                       QPushButton:disabled { background-color: white; border-radius:5px;}</string>
+   </property>
    <property name="text">
     <string>Процессор</string>
    </property>
@@ -67,12 +86,20 @@
      <height>23</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:enabled { background-color: #d8c1ba; border-radius:5px;}
+                                       QPushButton:hover { background-color: gray; color: white; }
+                                       QPushButton:pressed { background-color: black; color: white;}
+                                       QPushButton:disabled { background-color: white; border-radius:5px;}</string>
+   </property>
    <property name="text">
     <string>Постпроцессор</string>
    </property>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="myres.qrc"/>
+ </resources>
  <connections/>
 </ui>

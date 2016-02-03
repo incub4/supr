@@ -6,20 +6,36 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1108</width>
-    <height>707</height>
+    <width>620</width>
+    <height>606</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>620</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>620</width>
+    <height>606</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>SUPR препроцессор</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="myres.qrc">
+    <normaloff>:/icon/diagram44.ico</normaloff>:/icon/diagram44.ico</iconset>
   </property>
   <widget class="QTableWidget" name="table_kernel">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>20</y>
-     <width>921</width>
-     <height>201</height>
+     <y>24</y>
+     <width>600</width>
+     <height>175</height>
     </rect>
    </property>
    <property name="focusPolicy">
@@ -59,63 +75,515 @@
   <widget class="QPushButton" name="add_line">
    <property name="geometry">
     <rect>
-     <x>800</x>
-     <y>240</y>
-     <width>133</width>
-     <height>34</height>
+     <x>590</x>
+     <y>206</y>
+     <width>16</width>
+     <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent</string>
+   </property>
    <property name="text">
-    <string>добавить строку</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="myres.qrc">
+     <normaloff>:/icon/pluscircle.ico</normaloff>:/icon/pluscircle.ico</iconset>
    </property>
   </widget>
   <widget class="QPushButton" name="delite_line">
    <property name="geometry">
     <rect>
-     <x>640</x>
-     <y>240</y>
-     <width>124</width>
-     <height>34</height>
+     <x>570</x>
+     <y>206</y>
+     <width>16</width>
+     <height>16</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent</string>
+   </property>
    <property name="text">
-    <string>удалить строку</string>
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="myres.qrc">
+     <normaloff>:/icon/minuscircle.ico</normaloff>:/icon/minuscircle.ico</iconset>
    </property>
   </widget>
   <widget class="QTableWidget" name="table__load">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>240</y>
+     <y>270</y>
      <width>211</width>
      <height>191</height>
     </rect>
    </property>
-   <row>
-    <property name="text">
-     <string>1</string>
-    </property>
-   </row>
    <column>
     <property name="text">
-     <string>q-Статическая погонная нагрузка</string>
+     <string>Стержень</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>q</string>
     </property>
    </column>
   </widget>
   <widget class="QPushButton" name="PB_close">
    <property name="geometry">
     <rect>
-     <x>990</x>
-     <y>40</y>
+     <x>530</x>
+     <y>550</y>
      <width>75</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:enabled { background-color: #686868; border-radius:4px;}
+                                QPushButton:hover { background-color: gray; color: white; }
+                                QPushButton:pressed { background-color: black; color: white;}
+                                QPushButton:disabled { background-color: white; border-radius:4px;}</string>
    </property>
    <property name="text">
     <string>close</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="PB_save">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>520</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:enabled { background-color: #686868; border-radius:4px;}
+                                QPushButton:hover { background-color: gray; color: white; }
+                                QPushButton:pressed { background-color: black; color: white;}
+                                QPushButton:disabled { background-color: white; border-radius:4px;}</string>
+   </property>
+   <property name="text">
+    <string>save</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_open">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>550</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:enabled { background-color: #686868; border-radius:4px;}
+                                QPushButton:hover { background-color: gray; color: white; }
+                                QPushButton:pressed { background-color: black; color: white;}
+                                QPushButton:disabled { background-color: white; border-radius:4px;}</string>
+   </property>
+   <property name="text">
+    <string>open</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="up_line">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>620</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #686868</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Данные конструкции&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="middle_line">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>228</y>
+     <width>620</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #686868</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Данные нагрузок&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="plus_minus">
+   <property name="geometry">
+    <rect>
+     <x>566</x>
+     <y>204</y>
+     <width>44</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #686868;
+border-radius:3px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_processor">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>520</y>
+     <width>126</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:enabled { background-color: #686868; border-radius:4px;}
+                                QPushButton:hover { background-color: gray; color: white; }
+                                QPushButton:pressed { background-color: black; color: white;}
+                                QPushButton:disabled { background-color: white; border-radius:4px;}</string>
+   </property>
+   <property name="text">
+    <string>процессор</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_show_constr">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>550</y>
+     <width>126</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton:enabled { background-color: #686868; border-radius:4px;}
+                                QPushButton:hover { background-color: gray; color: white; }
+                                QPushButton:pressed { background-color: black; color: white;}
+                                QPushButton:disabled { background-color: white; border-radius:4px;}</string>
+   </property>
+   <property name="text">
+    <string>показать конструкцию</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>270</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>узел</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>F</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>495</x>
+     <y>270</y>
+     <width>111</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Узел с опорой</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="PB_plus_q">
+   <property name="geometry">
+    <rect>
+     <x>201</x>
+     <y>466</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="myres.qrc">
+     <normaloff>:/icon/pluscircle.ico</normaloff>:/icon/pluscircle.ico</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_minus_q">
+   <property name="geometry">
+    <rect>
+     <x>181</x>
+     <y>466</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="myres.qrc">
+     <normaloff>:/icon/minuscircle.ico</normaloff>:/icon/minuscircle.ico</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_plus_F">
+   <property name="geometry">
+    <rect>
+     <x>466</x>
+     <y>466</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="myres.qrc">
+     <normaloff>:/icon/pluscircle.ico</normaloff>:/icon/pluscircle.ico</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_minus_F">
+   <property name="geometry">
+    <rect>
+     <x>446</x>
+     <y>466</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="myres.qrc">
+     <normaloff>:/icon/minuscircle.ico</normaloff>:/icon/minuscircle.ico</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_plus_uzel">
+   <property name="geometry">
+    <rect>
+     <x>586</x>
+     <y>466</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="myres.qrc">
+     <normaloff>:/icon/pluscircle.ico</normaloff>:/icon/pluscircle.ico</iconset>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="PB_minus_usel">
+   <property name="geometry">
+    <rect>
+     <x>566</x>
+     <y>466</y>
+     <width>16</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="myres.qrc">
+     <normaloff>:/icon/minuscircle.ico</normaloff>:/icon/minuscircle.ico</iconset>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>250</y>
+     <width>165</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Статическая погонная нагрузка</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>250</y>
+     <width>177</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Сосредоточеные погонные усилия</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>250</y>
+     <width>34</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Опоры</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="middle_line_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>490</y>
+     <width>620</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #686868</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Обработка данных&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="plus_minus_2">
+   <property name="geometry">
+    <rect>
+     <x>177</x>
+     <y>464</y>
+     <width>44</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #686868;
+border-radius:3px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="plus_minus_3">
+   <property name="geometry">
+    <rect>
+     <x>442</x>
+     <y>464</y>
+     <width>44</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #686868;
+border-radius:3px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="plus_minus_4">
+   <property name="geometry">
+    <rect>
+     <x>562</x>
+     <y>464</y>
+     <width>44</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #686868;
+border-radius:3px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="middle_line_3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>585</y>
+     <width>620</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #686868</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <zorder>plus_minus_4</zorder>
+  <zorder>plus_minus_3</zorder>
+  <zorder>plus_minus_2</zorder>
+  <zorder>plus_minus</zorder>
+  <zorder>table_kernel</zorder>
+  <zorder>add_line</zorder>
+  <zorder>delite_line</zorder>
+  <zorder>table__load</zorder>
+  <zorder>PB_close</zorder>
+  <zorder>PB_save</zorder>
+  <zorder>PB_open</zorder>
+  <zorder>up_line</zorder>
+  <zorder>middle_line</zorder>
+  <zorder>PB_processor</zorder>
+  <zorder>PB_show_constr</zorder>
+  <zorder>tableWidget</zorder>
+  <zorder>tableWidget_2</zorder>
+  <zorder>PB_plus_q</zorder>
+  <zorder>PB_minus_q</zorder>
+  <zorder>PB_plus_F</zorder>
+  <zorder>PB_minus_F</zorder>
+  <zorder>PB_plus_uzel</zorder>
+  <zorder>PB_minus_usel</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>middle_line_2</zorder>
+  <zorder>middle_line_3</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="myres.qrc"/>
+ </resources>
  <connections/>
 </ui>

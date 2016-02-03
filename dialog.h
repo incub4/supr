@@ -22,7 +22,6 @@ public slots:
 
 private:
     Ui::Dialog *ui;
-    preprocessor *pr = new preprocessor;
     void clean();
 };
 
