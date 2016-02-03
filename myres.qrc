@@ -4,5 +4,6 @@
         <file>pluscircle.ico</file>
         <file>diagram44.ico</file>
         <file>background.png</file>
+        <file>Error.ico</file>
     </qresource>
 </RCC>

@@ -20,8 +20,10 @@ private:
      int line;
 
 public slots:
-    void addline();
-    void deliteline();
+    void addline(); // добавление стержня
+    void deliteline(); // удаление стержня
+private slots:
+
 };
 
 #endif // PREPROCESSOR_H

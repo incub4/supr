@@ -2,6 +2,7 @@
 #include "ui_preprocessor.h"
 #include <QDebug>
 #include <QIcon>
+#include <QMessageBox>
 preprocessor::preprocessor(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::preprocessor)
@@ -11,11 +12,12 @@ preprocessor::preprocessor(QWidget *parent) :
     ui->table_kernel->setFixedSize(600,175);
     ui->plus_minus->setFixedSize(44,20);
     ui->table_kernel->resizeColumnsToContents();
-    ui->table__load->resizeColumnsToContents();
 
     ui->up_line->setFixedSize(620,21);
     ui->middle_line->setFixedSize(620,21);
     ui->middle_line_2->setFixedSize(620,21);
+    ui->middle_line_3->setFixedSize(620,21);
+
 
 
 
@@ -54,5 +56,7 @@ void preprocessor::deliteline()
     ui->table_kernel->setRowCount(line);
     qDebug() << line;
 }
+
+
 
 

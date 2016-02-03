@@ -29,6 +29,9 @@
    <iconset resource="myres.qrc">
     <normaloff>:/icon/diagram44.ico</normaloff>:/icon/diagram44.ico</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QTableWidget" name="table_kernel">
    <property name="geometry">
     <rect>
@@ -148,7 +151,7 @@
                                 QPushButton:disabled { background-color: white; border-radius:4px;}</string>
    </property>
    <property name="text">
-    <string>close</string>
+    <string>back</string>
    </property>
   </widget>
   <widget class="QPushButton" name="PB_save">
