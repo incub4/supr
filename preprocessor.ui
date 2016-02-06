@@ -124,11 +124,6 @@
      <height>191</height>
     </rect>
    </property>
-   <row>
-    <property name="text">
-     <string>1</string>
-    </property>
-   </row>
    <column>
     <property name="text">
      <string>Стержень</string>
@@ -399,7 +394,7 @@ border-radius:3px;</string>
      <normaloff>:/icon/minuscircle.ico</normaloff>:/icon/minuscircle.ico</iconset>
    </property>
   </widget>
-  <widget class="QPushButton" name="PB_plus_uzel">
+  <widget class="QPushButton" name="PB_plus_opora">
    <property name="geometry">
     <rect>
      <x>586</x>
@@ -419,7 +414,7 @@ border-radius:3px;</string>
      <normaloff>:/icon/pluscircle.ico</normaloff>:/icon/pluscircle.ico</iconset>
    </property>
   </widget>
-  <widget class="QPushButton" name="PB_minus_usel">
+  <widget class="QPushButton" name="PB_minus_opora">
    <property name="geometry">
     <rect>
      <x>566</x>
@@ -582,8 +577,8 @@ border-radius:3px;</string>
   <zorder>PB_minus_q</zorder>
   <zorder>PB_plus_F</zorder>
   <zorder>PB_minus_F</zorder>
-  <zorder>PB_plus_uzel</zorder>
-  <zorder>PB_minus_usel</zorder>
+  <zorder>PB_plus_opora</zorder>
+  <zorder>PB_minus_opora</zorder>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
   <zorder>label_3</zorder>

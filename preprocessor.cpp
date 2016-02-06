@@ -9,9 +9,15 @@ preprocessor::preprocessor(QWidget *parent) :
     q=0;
     F=0;
     opora=0;
+
     ui->setupUi(this);
+
     ui->table_kernel->setFixedSize(600,175);
     ui->plus_minus->setFixedSize(44,20);
+    ui->plus_minus_2->setFixedSize(44,20);
+    ui->plus_minus_3->setFixedSize(44,20);
+    ui->plus_minus_4->setFixedSize(44,20);
+
     ui->table_kernel->resizeColumnsToContents();
     ui->table_load_q->resizeColumnsToContents();
 
@@ -21,30 +27,29 @@ preprocessor::preprocessor(QWidget *parent) :
 
 
 
-    connect(ui->PB_back,SIGNAL(clicked(bool)),this,SLOT(backToMenu()));
-    connect(ui->PB_back,SIGNAL(clicked(bool)),this,SLOT(close()));
+    connect(ui->PB_back,SIGNAL(clicked(bool)),this,SLOT(backToMenu())); // открытие выбора процессора
 
+    // Добавление стержней
     connect(ui->add_line,SIGNAL(clicked(bool)),this,SLOT(addline())); // Добавляем стержень
     connect(ui->delite_line,SIGNAL(clicked(bool)),this,SLOT(deliteline())); //Удалить стержень
 
-    connect(ui->PB_plus_q,SIGNAL(clicked(bool)),this,SLOT(addLoad_q()));
-    connect(ui->PB_plus_q,SIGNAL(clicked(bool)),this,SLOT(delLoad_q()));
+    // добавление нагрузок
+    connect(ui->PB_plus_q,SIGNAL(clicked(bool)),this,SLOT(addLoad_q()));//add
+    connect(ui->PB_minus_q,SIGNAL(clicked(bool)),this,SLOT(delLoad_q()));//delite
 
-    //    connect(ui->PB_close,SIGNAL(clicked(bool)),widget,SLOT(show()));
-    //    ui->table_kernel->setRowCount(10);
+    connect(ui->PB_plus_F,SIGNAL(clicked(bool)),this,SLOT(addLoad_F()));//add
+    connect(ui->PB_minus_F,SIGNAL(clicked(bool)),this,SLOT(delLoad_F()));//delite
 
+    connect(ui->PB_plus_opora,SIGNAL(clicked(bool)),this,SLOT(addLoad_opora()));//add
+    connect(ui->PB_minus_opora,SIGNAL(clicked(bool)),this,SLOT(delLoad_opora()));//delite
 
-}
-
-preprocessor::~preprocessor()
-{
-    delete ui;
 }
 
 void preprocessor::backToMenu()
 {
     Dialog *win = new Dialog;
     win->show();
+    this->close();
 }
 
 void preprocessor::addline()
@@ -66,7 +71,7 @@ void preprocessor::addLoad_q()
 {
     q++;
     ui->table_load_q->setRowCount(q);
-    qDebug() << q;
+    qDebug() <<"q:" << q;
 }
 
 void preprocessor::delLoad_q()
@@ -74,7 +79,40 @@ void preprocessor::delLoad_q()
     if(q>=1)
         q--;
     ui->table_load_q->setRowCount(q);
-    qDebug() << q;
+    qDebug() <<"q:" << q;
 }
 
+void preprocessor::addLoad_F()
+{
+    F++;
+    ui->table_load_F->setRowCount(F);
+    qDebug() <<"F:" << F;
+}
 
+void preprocessor::delLoad_F()
+{
+    if(F>=1)
+        F--;
+    ui->table_load_F->setRowCount(F);
+    qDebug() <<"F:" << F;
+}
+
+void preprocessor::addLoad_opora()
+{
+    opora++;
+    ui->table_load_opora->setRowCount(opora);
+    qDebug() <<"opora:" << opora;
+}
+
+void preprocessor::delLoad_opora()
+{
+    if(opora>=1)
+        opora--;
+    ui->table_load_opora->setRowCount(opora);
+    qDebug() <<"opora:" << opora;
+}
+
+preprocessor::~preprocessor()
+{
+    delete ui;
+}

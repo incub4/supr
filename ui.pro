@@ -14,10 +14,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         dialog.cpp \
-    preprocessor.cpp
+    preprocessor.cpp \
+    construction.cpp \
+    load.cpp \
+    rod.cpp
 
 HEADERS  += dialog.h \
-    preprocessor.h
+    preprocessor.h \
+    construction.h \
+    load.h \
+    rod.h
 
 FORMS    += dialog.ui \
     preprocessor.ui
